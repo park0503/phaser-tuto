@@ -78,7 +78,7 @@ class Room extends Phaser.Scene {
     this.physics.add.collider(this.player, this.platforms);
     this.physics.add.collider(this.stars, this.platforms);
 
-    this.physics.add.overlap(this.player, this.stars, this.collectStar, null, this);
+    // this.physics.add.overlap(this.player, this.stars, this.collectStar, null, this);
   }
 
   update() {
@@ -101,9 +101,9 @@ class Room extends Phaser.Scene {
     }
   }
 
-  private collectStart(player:Phaser.Types.Physics.Arcade.GameObjectWithBody, star:Phaser.Types.Physics.Arcade.GameObjectWithBody): {
-    star.disableBody(true, true);
-  }
+  // private collectStart(player:Phaser.Types.Physics.Arcade.GameObjectWithBody, star:Phaser.Types.Physics.Arcade.GameObjectWithBody): {
+  //   star.disableBody(true, true);
+  // }
 }
 
 export default Room;
